@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+    <body>
+    <centre>
+    <h1 id="heading">My Family Book</h1>
+    <br>
+    <img src=https://lh3.googleusercontent.com/proxy/NxA4Wc_jD8Xrq-6QGAIhGhqID14sU4pztRQTI5iZyZceR1Uj6bLF_WGS1SriRKTbCkkh5VSnKXUkYK3czF5poRZZBGbuMjT7h08nw-GKkV5AaewvQ5VSauiy_f1j style="width: 30%;" id="family_memeber_img">
+    <h2 id="name_of_family_member"></h2>
+    <button id="next" onclick="next()">Next Member</button>
+</centre>
+    <script>
+      var picture_array=[
+                     
+                     "adrika.jpg",
+                     "swagata.jpg",
+                     "ankur.jpg",
+                     "raissa.jpg",
+                     "shrabanti.jpg",
+                     "ranjan.jpg",
+                     "sanav.jpg",
+                    "sanchita.jpg",
+                    "deborshi.jpg"
+                     ];
+                     var name_array=[
+                         "Adrika Chakraborty (Me)",
+                         "Swagata Chakraborty (Mother)",
+                         "Ankur Chakraborty (Father)",
+                         "Raissa Das (Cousin Sister)",
+                         "Shrabanti Das (Aunt)",
+                         "Ranjan Das (Uncle)",
+                         "Sanav Saha (Cousin Brother)",
+                        "Sanchita Saha (Aunt)",
+                        "Deborshi Saha (Uncle)"
+                        ];
+                        
+                        var x = 1;
+                     var y = 0;
+
+                 function next() { 
+
+                  if(x == 9) {
+                  x=0;
+                  document.getElementById("heading").style.display = "none";
+                  };
+
+                  document.getElementById("family_memeber_img").src = picture_array[x];
+                  x++;
+
+                  if(y == 9){
+                     y=0; 
+                     }; 
+                  
+                  document.getElementById("name_of_family_member").innerHTML=name_array[y]; 
+                  y++;
+
+                };
+    </script>
+    </body>
+</html>
